@@ -9,7 +9,9 @@ client_id="123my456clientid789"
 client_secret="123my456secret789"
 ```
 replacing the stuff in the quotes with your [Spotify API](https://developer.spotify.com/dashboard/) credentials. (No credentials are needed for the iTunes Search API.)
+
 4. Change the Spotify URI in the variable at the top of the Python file.
+
 5. Run the Python file.
 ## Check all matches before using them
 This script is really basic, and it has no way of knowing if the track found on Apple Music is the same as the Spotify track. Ideally, it would check stuff like the music's duration and explicitness between the two to make sure it's the same song (but track names sometimes differ between the two services despite being the same song).
