@@ -19,7 +19,7 @@ print(" ".join((spotifyTrack["name"], "🅴 " if (
     spotifyTrack["explicit"] == True) else " ", spotifyTrack["external_urls"]["spotify"])))
 
 iTunesResults = requests.get("https://itunes.apple.com/search", params={
-    "term": " ".join((spotifyTrack["name"], spotifyTrack["album"]["name"])),
+    "term": " ".join((spotifyTrack["name"], spotifyTrack["album"]["name"])), # TODO: make this lookup one artist instead of the album name, so that it doesn't look up names of singles twice
     "entity": "song",
     "explicit": "No" if (spotifyTrack["explicit"] == False) else "Yes"
 }).json()
